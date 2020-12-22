@@ -15,8 +15,39 @@ export default {
     timing: false
   },
 
+  router: {
+    extendRoutes (routes, resolve) {
+      routes = [
+        {
+          path: '*',
+          name: '404',
+          component: resolve(__dirname, 'pages/404.vue')
+        },
+        {
+          path: '/',
+          name: 'Index',
+          component: resolve(__dirname, 'pages/index.vue')
+        },
+        {
+          path: '/page1',
+          name: 'Page1',
+          component: resolve(__dirname, 'pages/page1.vue')
+        },
+        {
+          path: '/page2/:id',
+          name: 'Page2',
+          component: resolve(__dirname, 'pages/page2.vue')
+        }
+      ]
+      routes.push(...routes)
+    }
+  },
+
   // Global CSS (https://go.nuxtjs.dev/config-css)
-  css: [],
+  css: [
+    // 重置全局样式
+    '@/assets/css/reset.css'
+  ],
 
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
   plugins: [],

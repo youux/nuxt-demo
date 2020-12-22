@@ -8,7 +8,7 @@
   "proseWrap": "preserve",
   "arrowParens": "always",
   "bracketSpacing": true,
-  "endOfLine": "crlf",
+  "endOfLine": "lf",
   "quoteProps": "as-needed",
   "htmlWhitespaceSensitivity": "ignore",
   "ignorePath": ".prettierignore",

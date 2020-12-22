@@ -20,7 +20,6 @@ module.exports = {
     'vue/no-parsing-error': [2, { 'x-invalid-end-tag': false }],
     'vue/no-side-effects-in-computed-properties': 0,
     'no-extend-native': 0,
-    eqeqeq: 'off',
-    'space-before-function-paren': 0
+    eqeqeq: 'off'
   }
 }
