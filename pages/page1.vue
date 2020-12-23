@@ -10,7 +10,7 @@
 
 <script>
 export default {
-  name: 'Page2',
+  name: 'Page1',
   data () {
     return {
       list: [

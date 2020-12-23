@@ -10,19 +10,15 @@ export default {
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
   },
 
+  // 服务器
   server: {
-    port: 1234,
-    timing: false
+    port: 1234
   },
-
+  // 路由
   router: {
     extendRoutes (routes, resolve) {
-      routes = [
-        {
-          path: '*',
-          name: '404',
-          component: resolve(__dirname, 'pages/404.vue')
-        },
+      routes.splice(0)
+      routes.push(...[
         {
           path: '/',
           name: 'Index',
@@ -38,8 +34,7 @@ export default {
           name: 'Page2',
           component: resolve(__dirname, 'pages/page2.vue')
         }
-      ]
-      routes.push(...routes)
+      ])
     }
   },
 

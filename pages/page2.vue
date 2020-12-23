@@ -1,9 +1,12 @@
 <template>
-  <div>222</div>
+  <div>{{ params }}</div>
 </template>
 
 <script>
 export default {
-  name: 'Page2'
+  name: 'Page2',
+  asyncData ({ params }) {
+    return { params }
+  }
 }
 </script>

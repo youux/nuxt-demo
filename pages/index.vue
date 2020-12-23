@@ -1,11 +1,11 @@
 <template>
   <div class="home">
-    <NuxtLink to="/page1">
+    <nuxt-Link to="/page1">
       去page1页面
-    </NuxtLink>
-    <NuxtLink to="/page2/1">
+    </nuxt-Link>
+    <nuxt-link to="/page2/1">
       去page2页面
-    </NuxtLink>
+    </nuxt-link>
   </div>
 </template>
 
@@ -26,5 +26,4 @@ export default {
     margin-top: 20px;
   }
 }
-
 </style>
