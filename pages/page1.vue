@@ -1,11 +1,13 @@
 <template>
-  <drag-box :data="list" @on-change="changeCard">
-    <template v-slot:default="{data}">
-      <div class="box">
-        {{ data.label }}
-      </div>
-    </template>
-  </drag-box>
+  <div>
+    <drag-box :data="list" @on-change="changeCard">
+      <template v-slot:default="{data}">
+        <div class="box">
+          {{ data.label }}
+        </div>
+      </template>
+    </drag-box>
+  </div>
 </template>
 
 <script>
@@ -65,6 +67,11 @@ export default {
   margin: 10px;
   color: #fff;
   background-color: #fc0;
+}
+@for $i from 0 through 100 {
+  .item-#{$i} {
+    background-color: rgba(random(255), random(255), random(255), random(1));
+  }
 }
 
 </style>

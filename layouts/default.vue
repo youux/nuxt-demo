@@ -20,13 +20,18 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.layout-wrap{
+.layout-wrap {
   position: relative;
+  z-index: 1;
   width: 100%;
-  height: 100%;
-  .container{
+  .container {
+    position: relative;
     width: 100%;
-    height: 100%;
+    max-width: 960px;
+    min-height: 88vh;
+    margin: 20px auto;
+    padding-top: 60px;
   }
 }
+
 </style>

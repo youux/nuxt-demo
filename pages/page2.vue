@@ -1,5 +1,9 @@
 <template>
-  <div>{{ params }}</div>
+  <div>
+    <div>
+      {{ params }}
+    </div>
+  </div>
 </template>
 
 <script>

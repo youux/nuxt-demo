@@ -1,36 +1,51 @@
 <template>
   <header class="header-wrap">
     <ul>
-      <li v-for="li in navList" :key="li">
-        {{ li }}
+      <li v-for="li in navList" :key="li.path">
+        <nuxt-link :to="li.path">
+          {{ li.label }}
+        </nuxt-link>
       </li>
     </ul>
   </header>
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
 export default {
   name: 'Header',
-  data () {
-    return {
-      navList: ['首页', '沸点', '小册', '活动', '探索掘金']
-    }
-  }
+  asyncData () {
+    return {}
+  },
+  computed: {
+    ...mapGetters({
+      navList: 'home/navList'
+    })
+  },
+  methods: {}
 }
 </script>
 
 <style lang="scss" scoped>
 .header-wrap {
-  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, .05);
   ul {
     display: flex;
-    flex-direction: row;
     align-items: center;
+    flex-direction: row;
     justify-content: center;
     li {
-      padding: 10px;
+      padding: 20px 10px;
+      list-style: none;
       cursor: pointer;
     }
   }
 }
+
 </style>

@@ -9,7 +9,7 @@
       @drop="dropMove($event, index)"
       @dragover="dragOver($event)"
     >
-      <slot :data="li" />
+      <slot :data="li" :index="index" />
     </div>
   </div>
 </template>

@@ -20,19 +20,34 @@ export default {
       routes.splice(0)
       routes.push(...[
         {
+          path: '*',
+          name: 'Notfound',
+          component: resolve(__dirname, 'pages/404')
+        },
+        {
           path: '/',
           name: 'Index',
-          component: resolve(__dirname, 'pages/index.vue')
+          component: resolve(__dirname, 'pages/index')
         },
         {
           path: '/page1',
           name: 'Page1',
-          component: resolve(__dirname, 'pages/page1.vue')
+          component: resolve(__dirname, 'pages/page1')
         },
         {
           path: '/page2/:id',
           name: 'Page2',
-          component: resolve(__dirname, 'pages/page2.vue')
+          component: resolve(__dirname, 'pages/page2')
+        },
+        {
+          path: '/page3',
+          name: 'Page3',
+          component: resolve(__dirname, 'pages/page3')
+        },
+        {
+          path: '/page4',
+          name: 'Page4',
+          component: resolve(__dirname, 'pages/page4')
         }
       ])
     }
@@ -67,7 +82,9 @@ export default {
   ],
 
   // Axios module configuration (https://go.nuxtjs.dev/config-axios)
-  axios: {},
+  axios: {
+    baseURL: 'https://api.nuxtjs.dev'
+  },
 
   // Content module configuration (https://go.nuxtjs.dev/config-content)
   content: {},
